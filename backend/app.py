@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import os
 import openai
 from dotenv import load_dotenv
@@ -13,6 +14,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 app = Flask(__name__)
+CORS(app)
 
 load_dotenv()
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
@@ -57,4 +59,4 @@ def chat():
     return jsonify({"response": result['answer']})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=8080)
