@@ -1,3 +1,4 @@
+from flask import Flask, request, jsonify
 import os
 import openai
 from dotenv import load_dotenv
@@ -8,7 +9,10 @@ from langchain_community.embeddings import OpenAIEmbeddings
 from langchain.indexes import VectorstoreIndexCreator
 from langchain_community.vectorstores import Chroma
 import warnings
+
 warnings.filterwarnings("ignore")
+
+app = Flask(__name__)
 
 load_dotenv()
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
@@ -37,24 +41,20 @@ chain = ConversationalRetrievalChain.from_llm(
 
 chat_history_global = []
 
-def chat(input_text):
+@app.route('/chat', methods=['POST'])
+def chat():
     global chat_history_global
+    data = request.json
 
+    input_text = data.get('input_text')
     if not input_text:
-        print("No input provided")
-        return
+        return jsonify({"error": "No input provided"}), 400
     
     input_with_instruction = f"{input_text}\n\Don't answer until I ask you. So please keep the answer short and show only name, summary of their profile, and website"
     result = chain({"question": input_with_instruction, "chat_history": chat_history_global})
-    #result = chain({"question": input_text, "chat_history": chat_history_global})
     chat_history_global.append((input_text, result['answer']))
 
-    print(f"Bot: {result['answer']}")
-
+    return jsonify({"response": result['answer']})
 
 if __name__ == "__main__":
-    while True:
-        user_input = input("You: ")
-        if user_input.lower() in ['exit', 'quit', 'bye']:
-            break
-        chat(user_input)
+    app.run(debug=True)
