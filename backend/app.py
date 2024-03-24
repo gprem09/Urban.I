@@ -21,17 +21,15 @@ OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 openai.api_key = OPENAI_API_KEY
 
 PERSIST = False
-PERSIST_DIRECTORY = "persist"
-DATA_DIRECTORY = "data/"
 
 def load_or_create_index():
-    if PERSIST and os.path.exists(PERSIST_DIRECTORY):
-        vectorstore = Chroma(persist_directory=PERSIST_DIRECTORY, embedding_function=OpenAIEmbeddings())
+    if PERSIST and os.path.exists("persist"):
+        vectorstore = Chroma(persist_directory="persist", embedding_function=OpenAIEmbeddings())
         return vectorstore
     else:
-        loader = DirectoryLoader(DATA_DIRECTORY)
+        loader = DirectoryLoader("data/")
         creator = VectorstoreIndexCreator(
-            vectorstore_kwargs={"persist_directory": PERSIST_DIRECTORY}) if PERSIST else VectorstoreIndexCreator()
+            vectorstore_kwargs={"persist_directory": "persist"}) if PERSIST else VectorstoreIndexCreator()
         return creator.from_loaders([loader]).vectorstore
 
 index = load_or_create_index()
