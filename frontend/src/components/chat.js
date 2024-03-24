@@ -1,6 +1,17 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import profiles from './profilesData';
+import {
+  Box,
+  Button,
+  Input,
+  VStack,
+  Text,
+  Link,
+  Container,
+  Grid,
+  GridItem
+} from '@chakra-ui/react';
 
 export const Chat = () => {
     const [inputText, setInputText] = useState('');
@@ -16,9 +27,7 @@ export const Chat = () => {
         if (!inputText.trim()) return;
 
         try {
-            const response = await axios.post('http://localhost:8080/chat', { 
-                input_text: inputText 
-            });
+            const response = await axios.post('http://localhost:8080/chat', { input_text: inputText });
             const reply = response.data.response;
 
             setChatHistory(chatHistory => [...chatHistory, { question: inputText, answer: reply }]);
@@ -40,46 +49,44 @@ export const Chat = () => {
     };
 
     return (
-        <div>
-            <div>
+        <Container maxW="container.xl" mt={16}>
+            <VStack spacing={4}>
                 {chatHistory.map((chat, index) => (
-                    <div key={index} className="chat-message">
-                        <p><strong>You:</strong> {chat.question}</p>
-                        <p><strong>Bot:</strong> {chat.answer}</p>
-                    </div>
+                    <Box key={index} p={5} shadow="md" borderWidth="1px" borderRadius="md">
+                        <Text><strong>You:</strong> {chat.question}</Text>
+                        <Text><strong>Bot:</strong> {chat.answer}</Text>
+                    </Box>
                 ))}
-            </div>
-            <form onSubmit={handleSubmit} className="chat-form">
-                <input
-                    type="text"
-                    value={inputText}
-                    onChange={handleInputChange}
-                    placeholder="Type your message here..."
-                    className="chat-input"
-                />
-                <button type="submit" className="chat-submit">Send</button>
+            </VStack>
+            <form onSubmit={handleSubmit}>
+                <VStack mt="4">
+                    <Input
+                        value={inputText}
+                        onChange={handleInputChange}
+                        placeholder="Type your message here..."
+                    />
+                    <Button type="submit" colorScheme="yellow">Send</Button>
+                </VStack>
             </form>
-            <div className="profiles-container">
-                {selectedProfiles.length > 0 ? (
-                    selectedProfiles.map((profile, index) => (
-                        <div key={index} className="profile-card">
-                            <h3>{profile.name}</h3>
-                            <p><strong>Country:</strong> {profile.country}</p>
-                            <p>{profile.profile}</p>
-                            <a href={profile.website} target="_blank" rel="noopener noreferrer">Visit Website</a>
-                        </div>
-                    ))
-                ) : (
-                    profiles.map((profile, index) => (
-                        <div key={index} className="profile-card">
-                            <h3>{profile.name}</h3>
-                            <p><strong>Country:</strong> {profile.country}</p>
-                            <p>{profile.profile}</p>
-                            <a href={profile.website} target="_blank" rel="noopener noreferrer">Visit Website</a>
-                        </div>
-                    ))
-                )}
-            </div>
-        </div>
+            <Grid templateColumns="repeat(4, 1fr)" gap={6} mt="6">
+                {selectedProfiles.length > 0 ? selectedProfiles.map((profile, index) => (
+                    <GridItem key={index} p={5} shadow="md" borderWidth="1px" borderRadius="md">
+                        <Text fontSize="xl">{profile.name}</Text>
+                        <Text>Country: {profile.country}</Text>
+                        <br />
+                        <Text>{profile.profile}</Text>
+                        <br />
+                        <Link href={profile.website} isExternal><strong>Visit Website</strong></Link>
+                    </GridItem>
+                )) : profiles.map((profile, index) => (
+                    <GridItem key={index} p={5} shadow="md" borderWidth="1px" borderRadius="md">
+                        <Text fontSize="xl">{profile.name}</Text>
+                        <Text>Country: {profile.country}</Text>
+                        <br />
+                        <Link href={profile.website} isExternal><strong>Visit Website</strong></Link>
+                    </GridItem>
+                ))}
+            </Grid>
+        </Container>
     );
 };
