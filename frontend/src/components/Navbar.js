@@ -4,6 +4,7 @@ import { Flex, Button } from "@chakra-ui/react";
 export const Navbar = () => {
   return (
     <Flex
+      bg="white"
       position="fixed"
       top="0"
       zIndex="100"
@@ -11,7 +12,6 @@ export const Navbar = () => {
       justifySelf="center"
       justifyContent="space-between"
       alignItems="center"
-      borderRadius="100px"
       height="72px"
       width="100%"
     >
