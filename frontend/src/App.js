@@ -2,15 +2,16 @@ import React from "react";
 import { Chat } from "./components/chat";
 import { Landing } from "./components/Landing";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Flex, Text, Button } from "@chakra-ui/react";
+import { Stack, Text, Button } from "@chakra-ui/react";
 import { Navbar } from "./components/Navbar";
 import { ChatWidget } from "./components/ChatWidget";
+import { Footer } from "./components/Footer";
 import "./App.css";
 
 function App() {
   return (
     <BrowserRouter>
-      <Flex // Ensure the container spans the entire viewport height
+      <Stack // Ensure the container spans the entire viewport height
         justifyContent="center" // Center the child elements horizontally
         alignItems="center" // Center the child elements vertically
       >
@@ -19,8 +20,9 @@ function App() {
           <Route path="/chat" element={<Chat />} />
         </Routes>
         <Navbar />
+        <Footer />
         <ChatWidget />
-      </Flex>
+      </Stack>
     </BrowserRouter>
   );
 }
