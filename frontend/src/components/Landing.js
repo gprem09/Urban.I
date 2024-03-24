@@ -1,34 +1,53 @@
 import React from "react";
-import { Flex, Select, Button } from "@chakra-ui/react";
+import {
+  Flex,
+  Text,
+  Heading,
+  Image,
+  Button,
+  Stack,
+  Box,
+} from "@chakra-ui/react";
 import { RiCircleFill } from "react-icons/ri";
 
 export const Landing = () => {
   return (
-    <Flex width="100%" height="100%">
-      <Flex
-        position="fixed"
-        top="0"
-        zIndex="100"
-        paddingInline="1rem"
-        justifySelf="center"
-        justifyContent="space-between"
-        alignItems="center"
-        borderRadius="100px"
-        height="72px"
+    <Flex width="100%" height="100%" marginTop="5rem" marginInline="1rem">
+      <Box
+        position="relative"
         width="100%"
+        height="500px"
+        borderRadius="20px"
+        overflow="hidden"
       >
-        <Flex gap="0.5rem">
-          <Button variant="lgrey">Brandname</Button>
-          <Button variant="lgrey">Home</Button>
-          <Button variant="lgrey">Explore</Button>
-          <Button variant="lgrey">Projects</Button>
-          <Button variant="lgrey">Our Mission</Button>
-        </Flex>
-        <Flex gap="0.5rem">
-          <Button variant="lgrey">Saved Projects</Button>
-          <Button variant="boutline">My Account</Button>
-        </Flex>
-      </Flex>
+        <Image
+          src="/images/landingImage.jpg"
+          alt="Landing Image"
+          objectFit="cover"
+          width="100%"
+          height="100%"
+          position="absolute"
+          top="0"
+          left="0"
+        />
+        <Stack
+          position="absolute"
+          bottom="0"
+          left="0"
+          padding="1rem"
+          spacing="1rem"
+          color="white"
+        >
+          <Text fontSize="xl">Drifter</Text>
+          <Heading fontSize="3xl" color="white">
+            Discover the most innovative designs today.
+          </Heading>
+          <Flex gap="1rem">
+            <Button variant="white">Get Started</Button>
+            <Button variant="woutline">Learn More</Button>
+          </Flex>
+        </Stack>
+      </Box>
     </Flex>
   );
 };

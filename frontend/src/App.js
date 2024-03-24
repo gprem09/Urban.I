@@ -1,9 +1,9 @@
 import React from "react";
 import { Chat } from "./components/chat";
-import Navbar from "./components/Navbar";
 import { Landing } from "./components/Landing";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Flex, Text, Button } from "@chakra-ui/react";
+import { Navbar } from "./components/Navbar";
 import "./App.css";
 
 function App() {

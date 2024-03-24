@@ -78,6 +78,15 @@ const components = {
         border: `1px solid #C4C7C8`,
         borderRadius: `100px`,
       },
+      woutline: {
+        background: `none`,
+        fontWeight: `500`,
+        letterSpacing: `-0.04em`,
+        fontFamily: `Montserrat`,
+        color: `white`,
+        border: `1px solid white`,
+        borderRadius: `100px`,
+      },
       yellow: {
         background: `#ECF86E`,
         fontFamily: `Montserrat`,
