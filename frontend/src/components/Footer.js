@@ -6,7 +6,7 @@ export const Footer = () => {
       <Flex width="100%" justifyContent="space-between" padding="3rem">
         <Flex gap="0.4rem">
           <RiEye2Fill style={{ width: "36px", height: "36px" }} />
-          <Heading>urbanAI</Heading>
+          <Heading>urbanI</Heading>
         </Flex>
         <Stack gap="1rem">
           <Heading fontSize="2xl" maxWidth="500px">
@@ -29,7 +29,7 @@ export const Footer = () => {
         </Stack>
       </Flex>
       <Text textAlign="center" opacity="0.6" fontSize="sm">
-        © 2024 urbanAI. All Rights Reserved. | Privacy Policy | Terms of Service
+        © 2024 urbanI. All Rights Reserved. | Privacy Policy | Terms of Service
         | Contact Us
       </Text>
     </Stack>

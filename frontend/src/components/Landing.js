@@ -59,7 +59,7 @@ export const Landing = () => {
             gap="0.5rem"
           >
             <RiEye2Fill style={{ width: "24px", height: "24px" }} />
-            urbanAI
+            urbanI
           </Text>
           <Heading fontSize="6xl" lineHeight="1em" color="white">
             Discover the most innovative designs today.
