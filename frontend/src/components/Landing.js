@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Flex,
   Text,
@@ -7,7 +7,6 @@ import {
   Button,
   Stack,
   Box,
-  Card,
 } from "@chakra-ui/react";
 import { ProjBox } from "./Projbox";
 
