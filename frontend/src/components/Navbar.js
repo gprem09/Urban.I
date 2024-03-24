@@ -1,24 +1,31 @@
-import { Flex, Text, Button } from "@chakra-ui/react";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Flex, Button } from "@chakra-ui/react";
 
-const Navbar = () => {
+export const Navbar = () => {
   return (
     <Flex
       position="fixed"
-      bottom="0.5rem"
-      color="white"
+      top="0"
       zIndex="100"
-      paddingInline={["2rem", "4rem", "8rem"]}
+      paddingInline="1rem"
       justifySelf="center"
       justifyContent="space-between"
-      width={["100%", "80%"]}
-      maxWidth="800px"
       alignItems="center"
       borderRadius="100px"
       height="72px"
-    ></Flex>
+      width="100%"
+    >
+      <Flex gap="0.5rem">
+        <Button variant="lgrey">Brandname</Button>
+        <Button variant="lgrey">Home</Button>
+        <Button variant="lgrey">Explore</Button>
+        <Button variant="lgrey">Projects</Button>
+        <Button variant="lgrey">Our Mission</Button>
+      </Flex>
+      <Flex gap="0.5rem">
+        <Button variant="lgrey">Saved Projects</Button>
+        <Button variant="boutline">My Account</Button>
+      </Flex>
+    </Flex>
   );
 };
-
-export default Navbar;
