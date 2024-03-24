@@ -12,7 +12,7 @@ import { ProjBox } from "./Projbox";
 
 export const Landing = () => {
   return (
-    <Stack width="100%" height="100%" marginBlock="5rem" marginInline="1rem">
+    <Stack width="100%" height="100%" marginBlock="5rem" paddingInline="1rem">
       <Box
         position="relative"
         width="100%"
@@ -82,6 +82,7 @@ export const Landing = () => {
             <Button variant="white">Learn More</Button>
           </Flex>
         </Stack>
+
         <Image
           src="/images/rightAbt.png"
           alt="Landing Image"
@@ -89,13 +90,14 @@ export const Landing = () => {
           height="100px"
         />
       </Flex>
-      <Image
-        src="/images/Frame 1707478446.png"
-        alt="Landing Image"
-        width="100%"
-        height="100%"
-        marginBottom="6rem"
-      />
+      <Flex gap="0.5rem" width="100%">
+        <ProjBox image="/images/sendai.jpg" title="Sendai University" />
+        <ProjBox image="/images/image 65.png" title="Shari Park" />
+        <ProjBox image="/images/image 63.png" title="Oakford Green" />
+        <ProjBox image="/images/image 76.png" title="Willowfield Valley" />
+        <ProjBox image="/images/image 66.png" title="Sendai University" />
+      </Flex>
+
       <Flex
         justifyContent="center"
         gap="2rem"
@@ -121,13 +123,19 @@ export const Landing = () => {
           height="auto"
         />
       </Flex>
-      <Flex gap="0.5rem" width="100%">
-        <ProjBox image="/images/sendai.jpg" title="Sendai University" />
-        <ProjBox image="/images/image 65.png" title="Shari Park" />
-        <ProjBox image="/images/image 63.png" title="Oakford Green" />
-        <ProjBox image="/images/image 76.png" title="Willowfield Valley" />
-        <ProjBox image="/images/image 66.png" title="Sendai University" />
-      </Flex>
+      <Image
+        src="/images/Frame 1707478446.png"
+        alt="Landing Image"
+        width="100%"
+        height="100%"
+        marginBottom="6rem"
+      />
+      <Image
+        src="/images/Frame 1707478447.png"
+        alt="Landing Image"
+        width="100%"
+        height="auto"
+      />
     </Stack>
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import { Chat } from "./components/chat";
 import { Landing } from "./components/Landing";
+import { Explore } from "./components/Explore";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Stack, Text, Button } from "@chakra-ui/react";
 import { Navbar } from "./components/Navbar";
@@ -17,6 +18,7 @@ function App() {
       >
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="/explore" element={<Explore />} />
           <Route path="/chat" element={<Chat />} />
         </Routes>
         <Navbar />
