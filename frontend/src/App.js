@@ -7,6 +7,7 @@ import { Stack, Text, Button } from "@chakra-ui/react";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { ProjectPage } from "./components/ProjectPage";
+import { InteractiveMap } from "./components/InteractiveMap";
 import "./App.css";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/explore" element={<Explore />} />
           <Route path="/chats" element={<Chat />} />
           <Route path="/project" element={<ProjectPage />} />
+          <Route path="/map" element={<InteractiveMap />} />
         </Routes>
         <Navbar />
         <Footer />
