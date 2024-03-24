@@ -3,17 +3,13 @@ import { extendTheme } from "@chakra-ui/react";
 // Dark theme configuration
 const colors = {
   brand: {
-    deep: `#E92498`,
+    deep: `#ECF86E`,
     700: `#F6A8D4`,
     500: `#FB5680`,
     400: `#F87CC7`,
     300: `#FAB9D8`,
   },
-  hotpink: `#E92498`,
-  lpink: `#F6A8D4`,
-  lorange: `#FDC7AB`,
-  dorange: `#FC8119`,
-  peach: `#FEF6F7`,
+  lgray: `#F6F6F6`,
 
   secondary: {
     700: `#20A1A2`,
@@ -42,9 +38,14 @@ const components = {
         color: `black`,
         borderRadius: `100px`,
       },
-      hotpink: {
-        background: `#E92498`,
-        color: `white`,
+      lgrey: {
+        background: `#F6F6F6`,
+        color: `black`,
+        borderRadius: `100px`,
+      },
+      yellow: {
+        background: `#ECF86E`,
+        color: `black`,
         borderRadius: `100px`,
       },
     },
@@ -52,7 +53,7 @@ const components = {
   Text: {
     baseStyle: {
       color: "black", // Your desired text color
-      fontFamily: `Nunito`,
+      fontFamily: `Manrope`,
       fontSize: `1rem`,
       letterSpacing: "-0.02em",
     },
@@ -64,7 +65,7 @@ const components = {
   },
   Heading: {
     baseStyle: {
-      fontFamily: `Nunito`,
+      fontFamily: `Montserrat`,
       fontWeight: `700`,
       color: "black",
       letterSpacing: `-0.01em`,
@@ -87,8 +88,8 @@ export const chakraTheme = extendTheme({
   styles: {
     global: {
       body: {
-        fontFamily: "nunito",
-        bg: "#FEF6F7",
+        fontFamily: "Manrope",
+        bg: "#FFFFFF",
         color: "black",
       },
     },
