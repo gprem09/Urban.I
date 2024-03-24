@@ -9,6 +9,7 @@ import {
   Box,
 } from "@chakra-ui/react";
 import { ProjBox } from "./Projbox";
+import { RiEye2Fill } from "react-icons/ri";
 
 export const Landing = () => {
   return (
@@ -50,8 +51,15 @@ export const Landing = () => {
           maxWidth="600px"
           zIndex="3"
         >
-          <Text fontSize="xl" color="white">
-            Drifter
+          <Text
+            fontSize="xl"
+            color="white"
+            display="flex"
+            alignItems="center"
+            gap="0.5rem"
+          >
+            <RiEye2Fill style={{ width: "24px", height: "24px" }} />
+            urbanAI
           </Text>
           <Heading fontSize="6xl" lineHeight="1em" color="white">
             Discover the most innovative designs today.
@@ -61,6 +69,15 @@ export const Landing = () => {
             <Button variant="woutline">Learn More</Button>
           </Flex>
         </Stack>
+        <Image
+          position="absolute"
+          zIndex="4"
+          right="0"
+          bottom="0"
+          width="300px"
+          height="auto"
+          src="/images/Group 59.png"
+        />
       </Box>
       <Flex justifyContent="center" alignItems="center" paddingBlock="10rem">
         <Image

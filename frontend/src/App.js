@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Stack, Text, Button } from "@chakra-ui/react";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
-import { projhead } from "./components/projhead";
+import { ProjectPage } from "./components/ProjectPage";
 import "./App.css";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/explore" element={<Explore />} />
           <Route path="/chats" element={<Chat />} />
-          <Route path="/project" element={<projhead />} />
+          <Route path="/project" element={<ProjectPage />} />
         </Routes>
         <Navbar />
         <Footer />
