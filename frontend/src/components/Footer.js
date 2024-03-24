@@ -9,6 +9,7 @@ export const Footer = () => {
       <Input
         variant="outline"
         color="black"
+        border="black"
         placeholder="Email Address..."
       ></Input>
       <Button variant="white">Email Address</Button>
