@@ -64,8 +64,7 @@ const components = {
         borderRadius: `100px`,
         transition: "background-color 0.3s ease-in-out", // Add transition property
         "&:hover": {
-          // Corrected hover syntax
-          background: `#DFF124`, // Change background color on hover
+          background: `#DFF124`,
         },
       },
       lgrey: {
@@ -76,6 +75,9 @@ const components = {
         fontFamily: `Montserrat`,
         color: `black`,
         borderRadius: `100px`,
+        "&:hover": {
+          background: `#DFF124`,
+        },
       },
       boutline: {
         padding: `1.4rem`,
@@ -86,6 +88,11 @@ const components = {
         color: `black`,
         border: `1px solid #C4C7C8`,
         borderRadius: `100px`,
+        "&:hover": {
+          // Corrected hover syntax
+          background: `#DFF124`, // Change background color on hover
+          border: `white`,
+        },
       },
       woutline: {
         padding: `1.4rem`,
@@ -96,6 +103,11 @@ const components = {
         color: `white`,
         border: `1px solid white`,
         borderRadius: `100px`,
+        "&:hover": {
+          // Corrected hover syntax
+          background: `#DFF124`, // Change background color on hover
+          color: `black`,
+        },
       },
       yellow: {
         padding: `1.4rem`,
@@ -103,6 +115,10 @@ const components = {
         fontFamily: `Montserrat`,
         color: `black`,
         borderRadius: `100px`,
+        "&:hover": {
+          background: `black`,
+          color: `white`,
+        },
       },
     },
   },
