@@ -44,7 +44,7 @@ export const Navbar = () => {
       <Link to="/">
         <Button variant="lgrey" gap="0.2rem">
           <RiEye2Fill style={{ width: "24px", height: "24px" }} />
-          urbanAI
+          urbanI
         </Button>
       </Link>
       <Flex gap="0.5rem">
