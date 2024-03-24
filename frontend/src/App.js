@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/explore" element={<Explore />} />
-          <Route path="/chat" element={<Chat />} />
+          <Route path="/chats" element={<Chat />} />
         </Routes>
         <Navbar />
         <Footer />
