@@ -5,7 +5,6 @@ import { Explore } from "./components/Explore";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Stack, Text, Button } from "@chakra-ui/react";
 import { Navbar } from "./components/Navbar";
-import { ChatWidget } from "./components/ChatWidget";
 import { Footer } from "./components/Footer";
 import "./App.css";
 
@@ -23,7 +22,6 @@ function App() {
         </Routes>
         <Navbar />
         <Footer />
-        <ChatWidget />
       </Stack>
     </BrowserRouter>
   );
