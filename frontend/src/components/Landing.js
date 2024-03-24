@@ -12,11 +12,11 @@ import {
   CardBody,
   CardFooter,
 } from "@chakra-ui/react";
-import { RiCircleFill } from "react-icons/ri";
+import { RiArrowRightSLine } from "react-icons/ri";
 
 const ProjBox = () => {
   return (
-    <Card borderRadius="20px">
+    <Card borderRadius="lg" overflow="hidden" width="300px" height="400px">
       <Box
         position="absolute"
         bottom="0"
@@ -24,15 +24,45 @@ const ProjBox = () => {
         width="100%"
         height="60%"
         opacity="0.8"
+        zIndex="2"
         background="linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)"
       />
-      <CardBody padding="0">
+      <Box padding="0" height="100%" width="100%">
         <Image
-          src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          height="100%"
+          position="absolute"
+          src="/images/sendai.jpg"
           alt="Green double couch with wooden legs"
           borderRadius="lg"
+          objectFit="cover"
         />
-      </CardBody>
+        <Stack
+          position="absolute"
+          bottom="0"
+          left="0"
+          padding="1rem"
+          spacing="1.0rem"
+          color="white"
+          maxWidth="600px"
+          zIndex="3"
+        >
+          <Heading fontSize="2xl" lineHeight="1em" color="white">
+            Discover the most innovative designs today.
+          </Heading>
+          <Text color="white" noOfLines="2">
+            Sendai University is renowned for its commitment to academic
+            excellence.
+          </Text>
+          <Button
+            marginTop="0.5rem"
+            variant="white"
+            justifyContent="space-between"
+          >
+            Get Started
+            <RiArrowRightSLine style={{ width: "28px", height: "28px" }} />
+          </Button>
+        </Stack>
+      </Box>
     </Card>
   );
 };
