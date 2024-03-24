@@ -31,7 +31,7 @@ export const Explore = () => {
         <Button variant="yellow">Search</Button>
       </Flex>
       <Flex>
-        <Stack width="30%" height="auto">
+        <Stack width="30%" minWidth="300px" height="auto">
           <Chat />
         </Stack>
         <Stack width="auto">

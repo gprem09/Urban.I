@@ -62,13 +62,8 @@ export const Chat = () => {
   };
 
   return (
-    <Container
-      maxW="container.xl"
-      height="100%"
-      display="flex"
-      direction="flex-end"
-    >
-      <VStack spacing={4} flexDirection="column-reverse">
+    <Container maxW="container.xl" height="100%">
+      <VStack spacing={4}>
         {chatHistory.map((chat, index) => (
           <Box
             key={index}
