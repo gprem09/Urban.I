@@ -10,6 +10,7 @@ const colors = {
     300: `#FAB9D8`,
   },
   lgray: `#F6F6F6`,
+  dgray: `#C4C7C8`,
 
   secondary: {
     700: `#20A1A2`,
@@ -20,6 +21,27 @@ const colors = {
   warning: `#FE8311`,
 };
 const components = {
+  Select: {
+    variants: {
+      noStyles: {
+        background: `none`,
+        padding: `0`,
+        height: `auto`,
+        position: `relative`,
+        alignItems: `auto`,
+        whiteSpace: `auto`,
+        textAlign: `left`,
+        fontWeight: `auto`,
+        lineHeight: `auto`,
+      },
+      filled: {
+        background: `#F6F6F6`,
+        fontFamily: `Montserrat`,
+        color: `black`,
+        borderRadius: `100px`,
+      },
+    },
+  },
   Button: {
     variants: {
       noStyles: {
@@ -35,16 +57,30 @@ const components = {
       },
       white: {
         background: `white`,
+        fontFamily: `Montserrat`,
         color: `black`,
         borderRadius: `100px`,
       },
       lgrey: {
         background: `#F6F6F6`,
+        fontWeight: `500`,
+        letterSpacing: `-0.04em`,
+        fontFamily: `Montserrat`,
         color: `black`,
+        borderRadius: `100px`,
+      },
+      boutline: {
+        background: `white`,
+        fontWeight: `500`,
+        letterSpacing: `-0.04em`,
+        fontFamily: `Montserrat`,
+        color: `black`,
+        border: `1px solid #C4C7C8`,
         borderRadius: `100px`,
       },
       yellow: {
         background: `#ECF86E`,
+        fontFamily: `Montserrat`,
         color: `black`,
         borderRadius: `100px`,
       },
@@ -69,11 +105,6 @@ const components = {
       fontWeight: `700`,
       color: "black",
       letterSpacing: `-0.01em`,
-    },
-  },
-  Select: {
-    option: {
-      bg: `white`,
     },
   },
 };
