@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Flex,
   Text,
@@ -15,8 +15,17 @@ import {
 import { RiArrowRightSLine } from "react-icons/ri";
 
 const ProjBox = () => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
-    <Card borderRadius="lg" overflow="hidden" width="300px" height="400px">
+    <Card
+      borderRadius="lg"
+      overflow="hidden"
+      width={isHovered ? "30%" : "20%"}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      transition="width 0.3s ease-in-out"
+      height="400px"
+    >
       <Box
         position="absolute"
         bottom="0"
@@ -26,6 +35,25 @@ const ProjBox = () => {
         opacity="0.8"
         zIndex="2"
         background="linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)"
+      />
+      <Box
+        position="absolute"
+        top="0"
+        left="0"
+        width="100%"
+        height="40%"
+        opacity="0.38"
+        zIndex="2"
+        background="linear-gradient(180deg, rgba(18, 60, 24, 1) 0%, rgba(18, 60, 24, 0) 100%)"
+      />
+      <Image
+        src="/images/yeelowtags.png"
+        position="absolute"
+        top="0"
+        left="0"
+        padding="1rem"
+        opacity="0.8"
+        zIndex="2"
       />
       <Box padding="0" height="100%" width="100%">
         <Image
@@ -146,7 +174,13 @@ export const Landing = () => {
           height="100px"
         />
       </Flex>
-      <ProjBox />
+      <Flex gap="0.5rem" width="100%">
+        <ProjBox />
+        <ProjBox />
+        <ProjBox />
+        <ProjBox />
+        <ProjBox />
+      </Flex>
     </Stack>
   );
 };
