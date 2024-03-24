@@ -50,7 +50,7 @@ def chat():
     if not input_text:
         return jsonify({"error": "No input provided"}), 400
     
-    input_with_instruction = f"{input_text}\nStart the conversation with enthusiasm and engage the user in the conversation. Don't provide any suggestions/results until I ask you. Please keep the answer short and show only name, summary of their profile, and website link."
+    input_with_instruction = f"{input_text}\nDon't answer until I ask you. Start the conversation with enthusiasm and engage the user in the conversation. Don't provide any suggestions until I ask you. Please keep the answer short and show only name, summary of their profile, and website link."
 
     result = chain({"question": input_with_instruction, "chat_history": chat_history_global})
     chat_history_global.append((input_text, result['answer']))
