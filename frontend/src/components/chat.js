@@ -14,6 +14,7 @@ import {
   GridItem,
   InputGroup,
   InputRightElement,
+  Spacer,
 } from "@chakra-ui/react";
 
 export const Chat = () => {
@@ -61,8 +62,13 @@ export const Chat = () => {
   };
 
   return (
-    <Container maxW="container.xl" mt={16}>
-      <VStack spacing={4}>
+    <Container
+      maxW="container.xl"
+      height="100%"
+      display="flex"
+      direction="flex-end"
+    >
+      <VStack spacing={4} flexDirection="column-reverse">
         {chatHistory.map((chat, index) => (
           <Box
             key={index}
@@ -80,7 +86,16 @@ export const Chat = () => {
           </Box>
         ))}
       </VStack>
-      <form onSubmit={handleSubmit}>
+      <Spacer />
+      <form
+        onSubmit={handleSubmit}
+        height="100%"
+        style={{
+          height: "100%",
+          display: "flex",
+          flexDirection: "column-reverse",
+        }}
+      >
         <VStack mt="4">
           <InputGroup>
             <Input

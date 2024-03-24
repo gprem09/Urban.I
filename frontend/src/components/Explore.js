@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Button, Stack } from "@chakra-ui/react";
+import { Flex, Button, Stack, Image, Heading, Text } from "@chakra-ui/react";
 import { RiSearchLine } from "react-icons/ri";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { Chat } from "./chat";
@@ -30,10 +30,21 @@ export const Explore = () => {
         </Button>
         <Button variant="yellow">Search</Button>
       </Flex>
+      <Flex>
+        <Stack width="30%" height="auto">
+          <Chat />
+        </Stack>
+        <Stack width="auto">
+          <Stack gap="0" marginBottom="0.5rem">
+            <Text fontSize="lg" fontWeight="600">
+              Real Estate Plans For You
+            </Text>
+            <Text fontSize="sm">5,790 results</Text>
+          </Stack>
 
-      <Stack width="30%">
-        <Chat />
-      </Stack>
+          <Image width="100%" src="/images/Frame 1707478485.png" />
+        </Stack>
+      </Flex>
     </Stack>
   );
 };
