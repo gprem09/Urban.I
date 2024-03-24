@@ -7,8 +7,35 @@ import {
   Button,
   Stack,
   Box,
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
 } from "@chakra-ui/react";
 import { RiCircleFill } from "react-icons/ri";
+
+const ProjBox = () => {
+  return (
+    <Card borderRadius="20px">
+      <Box
+        position="absolute"
+        bottom="0"
+        left="0"
+        width="100%"
+        height="60%"
+        opacity="0.8"
+        background="linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)"
+      />
+      <CardBody padding="0">
+        <Image
+          src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          alt="Green double couch with wooden legs"
+          borderRadius="lg"
+        />
+      </CardBody>
+    </Card>
+  );
+};
 
 export const Landing = () => {
   return (
@@ -20,6 +47,16 @@ export const Landing = () => {
         borderRadius="20px"
         overflow="hidden"
       >
+        <Box
+          position="absolute"
+          bottom="0"
+          left="0"
+          width="100%"
+          height="60%"
+          opacity="0.8"
+          zIndex="2"
+          background="linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)"
+        />
         <Image
           src="/images/landingImage.jpg"
           alt="Landing Image"
@@ -37,12 +74,13 @@ export const Landing = () => {
           padding="2rem"
           spacing="1.6rem"
           color="white"
-          maxWidth="500px"
+          maxWidth="600px"
+          zIndex="3"
         >
           <Text fontSize="xl" color="white">
             Drifter
           </Text>
-          <Heading fontSize="5xl" lineHeight="1em" color="white">
+          <Heading fontSize="6xl" lineHeight="1em" color="white">
             Discover the most innovative designs today.
           </Heading>
           <Flex gap="1rem">
@@ -51,9 +89,15 @@ export const Landing = () => {
           </Flex>
         </Stack>
       </Box>
-      <Flex justifyContent="center" alignContent="center">
-        <Stack textAlign="center">
-          <Heading maxWidth="800px">
+      <Flex justifyContent="center" alignItems="center" paddingBlock="10rem">
+        <Image
+          src="/images/leftAbt.png"
+          alt="Landing Image"
+          width="100px"
+          height="100px"
+        />
+        <Stack textAlign="center" alignItems="center" gap="1.2rem">
+          <Heading fontSize="6xl" maxWidth="800px" lineHeight="1.2em">
             Create the next masterpiece that changes the world.
           </Heading>
           <Text maxWidth="530px">
@@ -65,7 +109,14 @@ export const Landing = () => {
             <Button variant="white">Learn More</Button>
           </Flex>
         </Stack>
+        <Image
+          src="/images/rightAbt.png"
+          alt="Landing Image"
+          width="100px"
+          height="100px"
+        />
       </Flex>
+      <ProjBox />
     </Stack>
   );
 };

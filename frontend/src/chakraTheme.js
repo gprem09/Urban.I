@@ -47,7 +47,6 @@ const components = {
     variants: {
       noStyles: {
         background: `none`,
-        padding: `0`,
         height: `auto`,
         position: `relative`,
         alignItems: `auto`,
@@ -60,10 +59,12 @@ const components = {
         background: `white`,
         fontFamily: `Montserrat`,
         color: `black`,
+        padding: `1.4rem`,
         letterSpacing: "-0.04em",
         borderRadius: `100px`,
       },
       lgrey: {
+        padding: `1.4rem`,
         background: `#F6F6F6`,
         fontWeight: `500`,
         letterSpacing: `-0.04em`,
@@ -72,6 +73,7 @@ const components = {
         borderRadius: `100px`,
       },
       boutline: {
+        padding: `1.4rem`,
         background: `white`,
         fontWeight: `500`,
         letterSpacing: `-0.04em`,
@@ -81,6 +83,7 @@ const components = {
         borderRadius: `100px`,
       },
       woutline: {
+        padding: `1.4rem`,
         background: `none`,
         fontWeight: `500`,
         letterSpacing: `-0.04em`,
@@ -90,6 +93,7 @@ const components = {
         borderRadius: `100px`,
       },
       yellow: {
+        padding: `1.4rem`,
         background: `#ECF86E`,
         fontFamily: `Montserrat`,
         color: `black`,
