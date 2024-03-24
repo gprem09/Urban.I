@@ -151,19 +151,11 @@ export const Chat = () => {
         >
           <Stack
             gap="0.5rem"
-            height="100%"
+            height="500px"
             justifyContent="flex-end"
             paddingInline="0.5rem"
           >
-            {chatHistory.map((chat, index) => (
-              <Stack
-                key={index}
-                gap="0.5rem"
-                height="500px"
-                justifyContent="flex-end"
-                paddingBlock="1rem"
-              >
-                <Text
+            {chatHistory.map((chat) => (<><Text
                   padding="1rem"
                   bg="brand.deep"
                   borderRadius="20px  20px 0 20px"
@@ -176,9 +168,10 @@ export const Chat = () => {
                   borderRadius="20px  20px 20px 0"
                 >
                   {chat.answer}
-                </Text>
-              </Stack>
+                </Text></>
+                
             ))}
+            </Stack>
             <form onSubmit={handleSubmit} width="100%" height="100%">
               <VStack mt="4" width="100%">
                 <InputGroup>
@@ -198,7 +191,6 @@ export const Chat = () => {
                 </InputGroup>
               </VStack>
             </form>
-          </Stack>
         </Stack>
       </Stack>
       <Stack width="100%">
