@@ -7,6 +7,7 @@ import { Stack, Text, Button } from "@chakra-ui/react";
 import { Navbar } from "./components/Navbar";
 import { ChatWidget } from "./components/ChatWidget";
 import { Footer } from "./components/Footer";
+import { projhead } from "./components/projhead";
 import "./App.css";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/explore" element={<Explore />} />
           <Route path="/chats" element={<Chat />} />
+          <Route path="/project" element={<projhead />} />
         </Routes>
         <Navbar />
         <Footer />
