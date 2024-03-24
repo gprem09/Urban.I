@@ -12,7 +12,7 @@ import {
 import { RiArrowRightSLine } from "react-icons/ri";
 import { RiHeartAddLine, RiHeartLine } from "react-icons/ri";
 
-export const Explorebox = ({ image, title }) => {
+export const Explorebox = ({ image, name, country, website }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <Card
@@ -96,7 +96,7 @@ export const Explorebox = ({ image, title }) => {
           zIndex="3"
         >
           <Heading fontSize="2xl" lineHeight="1em" color="white">
-            {title}
+            {name}
           </Heading>
           <Stack gap="0">
             <Text color="white" noOfLines="1">
