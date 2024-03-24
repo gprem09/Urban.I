@@ -4,7 +4,7 @@ import { extendTheme } from "@chakra-ui/react";
 const colors = {
   brand: {
     deep: `#ECF86E`,
-    700: `#F6A8D4`,
+    bold: `#DFF124`,
     500: `#FB5680`,
     400: `#F87CC7`,
     300: `#FAB9D8`,
@@ -62,6 +62,11 @@ const components = {
         padding: `1.4rem`,
         letterSpacing: "-0.04em",
         borderRadius: `100px`,
+        transition: "background-color 0.3s ease-in-out", // Add transition property
+        "&:hover": {
+          // Corrected hover syntax
+          background: `#DFF124`, // Change background color on hover
+        },
       },
       lgrey: {
         padding: `1.4rem`,
