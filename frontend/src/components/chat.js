@@ -15,7 +15,9 @@ import {
   InputGroup,
   InputRightElement,
   Spacer,
+  Stack,
 } from "@chakra-ui/react";
+import { MdOutlineSupportAgent } from "react-icons/md";
 
 export const Chat = () => {
   const [inputText, setInputText] = useState("");
@@ -63,50 +65,63 @@ export const Chat = () => {
 
   return (
     <Container maxW="container.xl" height="100%">
-      <VStack spacing={4}>
-        {chatHistory.map((chat, index) => (
-          <Box
-            key={index}
-            p={5}
-            shadow="md"
-            borderWidth="1px"
-            borderRadius="md"
-          >
-            <Text>
-              <strong>You:</strong> {chat.question}
-            </Text>
-            <Text>
-              <strong>Bot:</strong> {chat.answer}
-            </Text>
-          </Box>
-        ))}
-      </VStack>
-      <Spacer />
-      <form
-        onSubmit={handleSubmit}
-        height="100%"
-        style={{
-          height: "100%",
-          display: "flex",
-          flexDirection: "column-reverse",
-        }}
-      >
-        <VStack mt="4">
-          <InputGroup>
-            <Input
-              value={inputText}
-              outline="1px solid #C4C7C8"
-              onChange={handleInputChange}
-              placeholder="Type your message here..."
-            />
-            <InputRightElement>
-              <Button type="submit" colorScheme="yellow" padding="0">
-                <RiSendPlaneFill style={{ width: "20px", height: "20px" }} />
-              </Button>
-            </InputRightElement>
-          </InputGroup>
-        </VStack>
-      </form>
+      <Stack alignContent="flex-end" justifyContent="flex-start" height="100%">
+        <Stack
+          gap="0.5rem"
+          height="500px"
+          justifyContent="flex-end"
+          overflowY="auto"
+          paddingBlock="1rem"
+          paddingInline="0.5rem"
+
+          // key={index}
+        >
+          {chatHistory.map((chat, index) => (
+            <Stack
+              key={index}
+              gap="0.5rem"
+              height="500px"
+              justifyContent="flex-end"
+              overflowY="auto"
+              paddingBlock="1rem"
+              paddingInline="0.5rem"
+
+              // key={index}
+            >
+              <Text
+                padding="1rem"
+                bg="brand.deep"
+                borderRadius="20px  20px 0 20px"
+              >
+                {chat.question}
+              </Text>
+              <Text padding="1rem" bg="lgray" borderRadius="20px  20px 20px 0">
+                {chat.answer}
+              </Text>
+            </Stack>
+          ))}
+          <form onSubmit={handleSubmit} width="100%" height="100%">
+            <VStack mt="4" width="100%">
+              <InputGroup>
+                <Input
+                  value={inputText}
+                  outline="1px solid #C4C7C8"
+                  onChange={handleInputChange}
+                  placeholder="Type your message here..."
+                />
+                <InputRightElement>
+                  <Button type="submit" colorScheme="yellow" padding="0">
+                    <RiSendPlaneFill
+                      style={{ width: "20px", height: "20px" }}
+                    />
+                  </Button>
+                </InputRightElement>
+              </InputGroup>
+            </VStack>
+          </form>
+        </Stack>
+      </Stack>
+
       <Grid display="none" templateColumns="repeat(4, 1fr)" gap={6} mt="6">
         {selectedProfiles.length > 0
           ? selectedProfiles.map((profile, index) => (
