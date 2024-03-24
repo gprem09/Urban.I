@@ -4,6 +4,7 @@ import { Landing } from "./components/Landing";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Flex, Text, Button } from "@chakra-ui/react";
 import { Navbar } from "./components/Navbar";
+import { ChatWidget } from "./components/ChatWidget";
 import "./App.css";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/chat" element={<Chat />} />
         </Routes>
         <Navbar />
+        <ChatWidget />
       </Flex>
     </BrowserRouter>
   );

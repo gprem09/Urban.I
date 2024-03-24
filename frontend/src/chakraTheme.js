@@ -4,7 +4,7 @@ import { extendTheme } from "@chakra-ui/react";
 const colors = {
   brand: {
     deep: `#ECF86E`,
-    700: `#F6A8D4`,
+    bold: `#DFF124`,
     500: `#FB5680`,
     400: `#F87CC7`,
     300: `#FAB9D8`,
@@ -62,6 +62,10 @@ const components = {
         padding: `1.4rem`,
         letterSpacing: "-0.04em",
         borderRadius: `100px`,
+        transition: "background-color 0.3s ease-in-out", // Add transition property
+        "&:hover": {
+          background: `#DFF124`,
+        },
       },
       lgrey: {
         padding: `1.4rem`,
@@ -71,6 +75,9 @@ const components = {
         fontFamily: `Montserrat`,
         color: `black`,
         borderRadius: `100px`,
+        "&:hover": {
+          background: `#DFF124`,
+        },
       },
       boutline: {
         padding: `1.4rem`,
@@ -81,6 +88,11 @@ const components = {
         color: `black`,
         border: `1px solid #C4C7C8`,
         borderRadius: `100px`,
+        "&:hover": {
+          // Corrected hover syntax
+          background: `#DFF124`, // Change background color on hover
+          border: `white`,
+        },
       },
       woutline: {
         padding: `1.4rem`,
@@ -91,6 +103,11 @@ const components = {
         color: `white`,
         border: `1px solid white`,
         borderRadius: `100px`,
+        "&:hover": {
+          // Corrected hover syntax
+          background: `#DFF124`, // Change background color on hover
+          color: `black`,
+        },
       },
       yellow: {
         padding: `1.4rem`,
@@ -98,6 +115,10 @@ const components = {
         fontFamily: `Montserrat`,
         color: `black`,
         borderRadius: `100px`,
+        "&:hover": {
+          background: `black`,
+          color: `white`,
+        },
       },
     },
   },

@@ -1,5 +1,6 @@
 import React from "react";
 import { Flex, Button } from "@chakra-ui/react";
+import { RiCircleFill } from "react-icons/ri";
 
 export const Navbar = () => {
   return (
@@ -17,7 +18,10 @@ export const Navbar = () => {
     >
       <Flex gap="0.5rem">
         <Button variant="lgrey">Brandname</Button>
-        <Button variant="lgrey">Home</Button>
+        <Button variant="lgrey" gap="0.4rem">
+          <RiCircleFill style={{ width: "8px", height: "8px" }} />
+          Home
+        </Button>
         <Button variant="lgrey">Explore</Button>
         <Button variant="lgrey">Projects</Button>
         <Button variant="lgrey">Our Mission</Button>

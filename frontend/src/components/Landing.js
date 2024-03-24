@@ -8,97 +8,12 @@ import {
   Stack,
   Box,
   Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
 } from "@chakra-ui/react";
-import { RiArrowRightSLine } from "react-icons/ri";
-
-const ProjBox = ({ image, title }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  return (
-    <Card
-      borderRadius="lg"
-      overflow="hidden"
-      width={isHovered ? "30%" : "20%"}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      transition="all 0.3s ease-in-out"
-      height="400px"
-    >
-      <Box
-        position="absolute"
-        bottom="0"
-        left="0"
-        width="100%"
-        height="60%"
-        opacity="0.8"
-        zIndex="2"
-        background="linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)"
-      />
-      <Box
-        position="absolute"
-        top="0"
-        left="0"
-        width="100%"
-        height="40%"
-        opacity={isHovered ? "0.60" : "0.38"}
-        zIndex="2"
-        background="linear-gradient(180deg, rgba(18, 20, 44, 1) 0%, rgba(18, 20, 44, 0) 100%)"
-      />
-      <Image
-        src="/images/yeelowtags.png"
-        display={isHovered ? "block" : "none"}
-        position="absolute"
-        top="0"
-        left="0"
-        padding="1rem"
-        opacity="0.8"
-        zIndex="3"
-      />
-      <Box padding="0" height="100%" width="100%">
-        <Image
-          height="100%"
-          position="absolute"
-          src={image}
-          alt="Green double couch with wooden legs"
-          borderRadius="lg"
-          objectFit="cover"
-        />
-        <Stack
-          position="absolute"
-          bottom="0"
-          left="0"
-          padding="1rem"
-          spacing="1.0rem"
-          color="white"
-          maxWidth="600px"
-          zIndex="3"
-        >
-          <Heading fontSize="2xl" lineHeight="1em" color="white">
-            {title}
-          </Heading>
-          <Text color="white" noOfLines="2">
-            Sendai University is renowned for its commitment to academic
-            excellence.
-          </Text>
-          <Button
-            marginTop="0.5rem"
-            variant={isHovered ? "yellow" : "white"}
-            justifyContent="space-between"
-          >
-            Get Started
-            <RiArrowRightSLine style={{ width: "28px", height: "28px" }} />
-          </Button>
-        </Stack>
-      </Box>
-    </Card>
-  );
-};
+import { ProjBox } from "./Projbox";
 
 export const Landing = () => {
   return (
-    <Stack width="100%" height="100%" marginTop="5rem" marginInline="1rem">
+    <Stack width="100%" height="100%" marginBlock="5rem" marginInline="1rem">
       <Box
         position="relative"
         width="100%"
@@ -175,11 +90,43 @@ export const Landing = () => {
           height="100px"
         />
       </Flex>
+      <Image
+        src="/images/Frame 1707478446.png"
+        alt="Landing Image"
+        width="100%"
+        height="100%"
+        marginBottom="6rem"
+      />
+      <Flex
+        justifyContent="center"
+        gap="2rem"
+        alignItems="center"
+        paddingBlock="6rem"
+      >
+        <Stack maxWidth="500px" gap="1.2rem">
+          <Heading fontSize="5xl">Envision the future.</Heading>
+          <Text maxWidth="400px">
+            View how thousands of the world’s best architectural designs would
+            look in your neighbourhood, using machine learning and 3D mapping
+            technology.
+          </Text>
+          <Flex gap="1rem">
+            <Button variant="boutline">Try It Out Now </Button>
+            <Button variant="white">Learn More</Button>
+          </Flex>
+        </Stack>
+        <Image
+          src="/images/Frame 1707478466.png"
+          alt="Landing Image"
+          width="660px"
+          height="auto"
+        />
+      </Flex>
       <Flex gap="0.5rem" width="100%">
         <ProjBox image="/images/sendai.jpg" title="Sendai University" />
         <ProjBox image="/images/image 65.png" title="Shari Park" />
-        <ProjBox image="/images/image 63.png" title="Sendai University" />
-        <ProjBox image="/images/image 76.png" title="Sendai University" />
+        <ProjBox image="/images/image 63.png" title="Oakford Green" />
+        <ProjBox image="/images/image 76.png" title="Willowfield Valley" />
         <ProjBox image="/images/image 66.png" title="Sendai University" />
       </Flex>
     </Stack>
