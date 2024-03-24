@@ -1,5 +1,6 @@
 import React from "react";
 import { Flex, Text, Button } from "@chakra-ui/react";
+import { RiCircleFill } from "react-icons/ri";
 
 export const Landing = () => {
   return (
@@ -15,9 +16,11 @@ export const Landing = () => {
         // borderRadius="100px"
         height="72px"
         width="100%"
-      >
-        aosidj asoidjasod ij asodj
-      </Flex>
+      ></Flex>
+      <Button variant="lgrey">
+        <RiCircleFill />
+        Home
+      </Button>
     </Flex>
   );
 };
