@@ -12,11 +12,11 @@ import { RiCircleFill } from "react-icons/ri";
 
 export const Landing = () => {
   return (
-    <Flex width="100%" height="100%" marginTop="5rem" marginInline="1rem">
+    <Stack width="100%" height="100%" marginTop="5rem" marginInline="1rem">
       <Box
         position="relative"
         width="100%"
-        height="500px"
+        height="600px"
         borderRadius="20px"
         overflow="hidden"
       >
@@ -34,12 +34,15 @@ export const Landing = () => {
           position="absolute"
           bottom="0"
           left="0"
-          padding="1rem"
-          spacing="1rem"
+          padding="2rem"
+          spacing="1.6rem"
           color="white"
+          maxWidth="500px"
         >
-          <Text fontSize="xl">Drifter</Text>
-          <Heading fontSize="3xl" color="white">
+          <Text fontSize="xl" color="white">
+            Drifter
+          </Text>
+          <Heading fontSize="5xl" lineHeight="1em" color="white">
             Discover the most innovative designs today.
           </Heading>
           <Flex gap="1rem">
@@ -48,6 +51,21 @@ export const Landing = () => {
           </Flex>
         </Stack>
       </Box>
-    </Flex>
+      <Flex justifyContent="center" alignContent="center">
+        <Stack textAlign="center">
+          <Heading maxWidth="800px">
+            Create the next masterpiece that changes the world.
+          </Heading>
+          <Text maxWidth="530px">
+            Our platform enables budding architects to contribute to a brighter
+            future through innovative interactive 3D mapping technology.
+          </Text>
+          <Flex gap="1rem">
+            <Button variant="boutline">View Projects</Button>
+            <Button variant="white">Learn More</Button>
+          </Flex>
+        </Stack>
+      </Flex>
+    </Stack>
   );
 };

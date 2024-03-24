@@ -37,6 +37,7 @@ const components = {
       filled: {
         background: `#F6F6F6`,
         fontFamily: `Montserrat`,
+        letterSpacing: "-0.04em",
         color: `black`,
         borderRadius: `100px`,
       },
@@ -59,6 +60,7 @@ const components = {
         background: `white`,
         fontFamily: `Montserrat`,
         color: `black`,
+        letterSpacing: "-0.04em",
         borderRadius: `100px`,
       },
       lgrey: {
@@ -100,7 +102,6 @@ const components = {
       color: "black", // Your desired text color
       fontFamily: `Manrope`,
       fontSize: `1rem`,
-      letterSpacing: "-0.02em",
     },
   },
   Box: {
@@ -111,9 +112,9 @@ const components = {
   Heading: {
     baseStyle: {
       fontFamily: `Montserrat`,
-      fontWeight: `700`,
+      fontWeight: `500`,
+      letterSpacing: "-0.04em",
       color: "black",
-      letterSpacing: `-0.01em`,
     },
   },
 };
