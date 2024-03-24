@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { RiArrowRightSLine } from "react-icons/ri";
 
-const ProjBox = () => {
+const ProjBox = ({ image, title }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <Card
@@ -23,7 +23,7 @@ const ProjBox = () => {
       width={isHovered ? "30%" : "20%"}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      transition="width 0.3s ease-in-out"
+      transition="all 0.3s ease-in-out"
       height="400px"
     >
       <Box
@@ -42,24 +42,25 @@ const ProjBox = () => {
         left="0"
         width="100%"
         height="40%"
-        opacity="0.38"
+        opacity={isHovered ? "0.60" : "0.38"}
         zIndex="2"
-        background="linear-gradient(180deg, rgba(18, 60, 24, 1) 0%, rgba(18, 60, 24, 0) 100%)"
+        background="linear-gradient(180deg, rgba(18, 20, 44, 1) 0%, rgba(18, 20, 44, 0) 100%)"
       />
       <Image
         src="/images/yeelowtags.png"
+        display={isHovered ? "block" : "none"}
         position="absolute"
         top="0"
         left="0"
         padding="1rem"
         opacity="0.8"
-        zIndex="2"
+        zIndex="3"
       />
       <Box padding="0" height="100%" width="100%">
         <Image
           height="100%"
           position="absolute"
-          src="/images/sendai.jpg"
+          src={image}
           alt="Green double couch with wooden legs"
           borderRadius="lg"
           objectFit="cover"
@@ -75,7 +76,7 @@ const ProjBox = () => {
           zIndex="3"
         >
           <Heading fontSize="2xl" lineHeight="1em" color="white">
-            Discover the most innovative designs today.
+            {title}
           </Heading>
           <Text color="white" noOfLines="2">
             Sendai University is renowned for its commitment to academic
@@ -83,7 +84,7 @@ const ProjBox = () => {
           </Text>
           <Button
             marginTop="0.5rem"
-            variant="white"
+            variant={isHovered ? "yellow" : "white"}
             justifyContent="space-between"
           >
             Get Started
@@ -175,11 +176,11 @@ export const Landing = () => {
         />
       </Flex>
       <Flex gap="0.5rem" width="100%">
-        <ProjBox />
-        <ProjBox />
-        <ProjBox />
-        <ProjBox />
-        <ProjBox />
+        <ProjBox image="/images/sendai.jpg" title="Sendai University" />
+        <ProjBox image="/images/image 65.png" title="Shari Park" />
+        <ProjBox image="/images/image 63.png" title="Sendai University" />
+        <ProjBox image="/images/image 76.png" title="Sendai University" />
+        <ProjBox image="/images/image 66.png" title="Sendai University" />
       </Flex>
     </Stack>
   );
