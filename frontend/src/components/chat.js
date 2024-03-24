@@ -68,13 +68,10 @@ export const Chat = () => {
       <Stack alignContent="flex-end" justifyContent="flex-start" height="100%">
         <Stack
           gap="0.5rem"
-          height="500px"
+          // height="500px"
+          height="100%"
           justifyContent="flex-end"
-          overflowY="auto"
-          paddingBlock="1rem"
           paddingInline="0.5rem"
-
-          // key={index}
         >
           {chatHistory.map((chat, index) => (
             <Stack
@@ -82,11 +79,7 @@ export const Chat = () => {
               gap="0.5rem"
               height="500px"
               justifyContent="flex-end"
-              overflowY="auto"
               paddingBlock="1rem"
-              paddingInline="0.5rem"
-
-              // key={index}
             >
               <Text
                 padding="1rem"
