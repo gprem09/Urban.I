@@ -1,10 +1,9 @@
 # Urbani
-### 🌟 submission for produHacks 2024 hackathon 🌟
+### 🌱 submission for produHacks 2024 hackathon 🌱
 
 ### Demo:
-[![demo video](https://github.com/reinesana/red_sea_app/assets/153279125/ce9d6b0a-bf72-4f0f-b435-c85b400e7401)](https://youtu.be/LY2TVymYyNM?si=OUKO4GjqYFazqQh8 "Red Sea DEMO")
+[![demo video](https://github.com/gprem09/produHacks/assets/153279125/d757c4ab-4da9-4941-86cf-dd980de4a0b8)](https://youtu.be/Ic43Gkj8H0c?si=77M7k5qIKRjSALuG "Urbani DEMO")
 
-<br>
 
 ## Inspiration
 Urbani is inspired by the resilience and renewal of urban areas impacted by conflicts and natural disasters. Recognizing the urgent need for housing, debris management to address community trauma, our platform draws inspiration from initiatives like the UNDP's efforts in Ukrainian cities, aiming to tap into local intelligence for reconstruction.
