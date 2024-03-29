@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Button, Stack } from "@chakra-ui/react";
+import { Flex, Button } from "@chakra-ui/react";
 import { RiSearchLine } from "react-icons/ri";
 import { RiArrowDownSLine } from "react-icons/ri";
 
