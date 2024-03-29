@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
       <Stack 
         justifyContent="center" 
-        alignItems="center" // Center the child elements vertically
+        alignItems="center" 
       >
         <Routes>
           <Route path="/" element={<Landing />} />
