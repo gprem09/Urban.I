@@ -14,7 +14,7 @@ function App() {
   return (
     <BrowserRouter>
       <Stack 
-        justifyContent="center" // Center the child elements horizontally
+        justifyContent="center" 
         alignItems="center" // Center the child elements vertically
       >
         <Routes>
