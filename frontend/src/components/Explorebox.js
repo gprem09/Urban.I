@@ -10,7 +10,6 @@ import {
   Card,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { RiArrowRightSLine } from "react-icons/ri";
 import { RiHeartAddLine, RiHeartLine } from "react-icons/ri";
 
 export const Explorebox = ({ image, name, country, website }) => {
