@@ -5,7 +5,6 @@ import { RiCircleFill } from "react-icons/ri";
 import { RiEye2Fill } from "react-icons/ri";
 import { RiHeartsFill } from "react-icons/ri";
 import { RiAccountCircleFill } from "react-icons/ri";
-import { RiCompass3Fill } from "react-icons/ri";
 export const Navbar = () => {
   return (
     <Flex
