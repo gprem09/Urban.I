@@ -13,7 +13,7 @@ import "./App.css";
 function App() {
   return (
     <BrowserRouter>
-      <Stack // Ensure the container spans the entire viewport height
+      <Stack 
         justifyContent="center" // Center the child elements horizontally
         alignItems="center" // Center the child elements vertically
       >
